@@ -272,7 +272,7 @@ Module Sk.
       uo. destruct p. exists s. ss. }
     destruct sk; ss; clarify.
     { lia. }
-    apply lt_S_n in BLKRANGE. eapply IHblk; eauto.
+    apply Nat.succ_lt_mono in BLKRANGE. eapply IHblk; eauto.
   Qed.
 
   Lemma env_found_range :
@@ -285,7 +285,7 @@ Module Sk.
     { apply Nat.lt_0_succ. }
     destruct blk.
     { apply Nat.lt_0_succ. }
-    uo. des_ifs. destruct p. ss. clarify. apply lt_n_S. eapply IHsk; eauto.
+    uo. des_ifs. destruct p. ss. clarify. apply -> Nat.succ_lt_mono. eapply IHsk; eauto.
     instantiate (1:=symb). rewrite Heq0. ss.
   Qed.
 
