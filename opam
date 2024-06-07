@@ -31,11 +31,11 @@ tags: [
 ]
 
 depends: [
-  "coq" { >= "8.15" & < "8.16" }
-  "coq-paco" { (= "4.1.2") }
-  "coq-itree" { (= "4.0.0") }
-  "coq-ordinal" { (= "0.5.2") }
-  "coq-compcert" { (= "3.11") }
+  "coq" { >= "8.15" }
+  "coq-paco" { (>= "4.1.2") }
+  "coq-itree" { (>= "4.0.0") }
+  "coq-ordinal" { (>= "0.5.2") }
+  "coq-compcert" { (>= "3.11") }
 ]
 
 build: [make "-j%{jobs}%"]
