@@ -443,7 +443,8 @@ Section TEST.
 
   Local Set Typeclasses Depth 50.
 
-  Goal forall (itr: itree (void1 +' void1 +' eventE) nat), resum_itr (tau;; itr) = tau;; resum_itr itr.
+
+  Goal forall (itr: itree (void1 +' void1 +' eventE) nat), resum_itr (F := (void1 +' void1 +' eventE)) (tau;; itr) = tau;; resum_itr itr.
   Proof. i. Timeout 1 my_red_both. refl. Qed.
 
   Goal forall (itr: itree (void1 +' eventE) nat), resum_itr (F:= void1 +' eventE +' void1) (tau;; itr) = tau;; resum_itr itr.
