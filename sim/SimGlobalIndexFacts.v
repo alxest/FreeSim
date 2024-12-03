@@ -440,6 +440,8 @@ Proof.
 Qed.
 
 Section EUTT.
+#[local] Hint Unfold eqit euttge : core.
+
 
 Theorem eutt_simg: forall R0 R1 RR (u: itree (E +' eventE) R0) (t: itree (E +' eventE) R1) (EUTT: eqit RR true true u t),
     simg (fun _ _ => RR) 0%ord 0%ord u t.
@@ -1135,6 +1137,7 @@ Qed.
 
 End TRANS.
 
+#[local] Hint Constructors eqitF : core.
 
 Section DUAL.
 
@@ -1336,6 +1339,7 @@ Section DUAL.
                       end)) (fun x => dualize2 (ktr x))
       end.
   Proof. unfold dualize2. ides itr; ss. destruct e; ss. Qed.
+
 
   Lemma dualize2_involution
         R (itr: itree (E +' eventE) R)

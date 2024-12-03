@@ -261,7 +261,7 @@ Lemma event_step_follow_dstar L s0 s1 s2 t1 t2
 Proof.
   inv STAR.
   { symmetry in H1. eapply Eapp_E0_inv in H1.
-    destruct H1. subst. simpl in NNIL. intuition. }
+    destruct H1. subst. simpl in NNIL. auto with *. }
   destruct H as [DET STEP1].
   exploit DET.(sd_at_determ); [eapply STEP|eapply STEP1|..].
   intros [TR EQ]. destruct t1; simpl in NNIL; [lia|].

@@ -13,8 +13,6 @@ Require Import Coqlib.
 Set Implicit Arguments.
 
 
-Global Opaque string_dec.
-
 (************ temporary buffer before putting it in Coqlib ***********)
 (************ temporary buffer before putting it in Coqlib ***********)
 (************ temporary buffer before putting it in Coqlib ***********)

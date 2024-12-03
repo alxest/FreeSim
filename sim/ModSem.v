@@ -197,7 +197,7 @@ Section MODSEML.
   (* Qed. *)
 
 
-  Let itree_eta E R (itr0 itr1: itree E R)
+  Lemma itree_eta E R (itr0 itr1: itree E R)
       (OBSERVE: observe itr0 = observe itr1)
     :
       itr0 = itr1.
@@ -307,7 +307,7 @@ Section MODSEML.
 
   Context {CONF: EMSConfig}.
 
-  Let add_comm_aux
+  Lemma add_comm_aux
       ms0 ms1 stl0 str0
       P
       (SIM: stl0 = str0)
